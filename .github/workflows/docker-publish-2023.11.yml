@@ -55,12 +55,13 @@ jobs:
           registry: ghcr.io
           username: '${{ github.actor }}'
           password: '${{ secrets.GITHUB_TOKEN }}'
+          
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
           context: .
           file: ./Dockerfile.2023.11
-          platforms: linux/amd64
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: '${{ steps.prep.outputs.tags }}'
           labels: >
