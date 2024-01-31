@@ -3,4 +3,4 @@ FROM jetbrains/teamcity-agent:latest
 USER root
 #
 RUN apt-get update
-RUN apt install jq
+RUN apt install -y jq 
