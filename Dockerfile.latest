@@ -2,5 +2,6 @@ FROM jetbrains/teamcity-agent:latest
 #
 USER root
 #
+RUN apt-add-repository ppa:ansible/ansible 
 RUN apt-get update
-RUN apt install -y jq 
+RUN apt install -y jq ansible
