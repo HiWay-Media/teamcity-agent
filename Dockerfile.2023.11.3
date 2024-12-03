@@ -3,5 +3,5 @@ FROM jetbrains/teamcity-agent:2023.11.3
 USER root
 RUN apt-add-repository ppa:ansible/ansible 
 RUN apt-get update
-RUN apt install -y jq ansible
+RUN apt install -y jq ansible sudo
 #
