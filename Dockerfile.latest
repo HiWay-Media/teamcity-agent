@@ -4,4 +4,6 @@ USER root
 #
 RUN apt-add-repository ppa:ansible/ansible 
 RUN apt-get update
-RUN apt install -y jq ansible rsync sudo
+RUN apt install -y jq ansible rsync sudo rclone
+#
+#RUN curl -O https://rclone.org/install.sh --cacert /etc/ssl/certs 
